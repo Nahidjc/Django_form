@@ -1,0 +1,9 @@
+{% extends 'First_App/base.html' %}
+{% block body_block %}
+<h1>Musician Form</h1>
+<form method="POST">
+  {{ musician_form.as_p }}
+  {% csrf_token %}
+  <input type="submit" name="submit" value="Add" class="btn btn-info">
+</form>
+{% endblock %}
